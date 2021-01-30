@@ -1,0 +1,17 @@
+.carousel-container {
+  padding-top: 1rem;
+  width: 100%;
+
+  &__wrapper {
+    padding: 1rem 0;
+  }  
+}
+
+
+.react-multiple-carousel__arrow--left {
+  left: calc(1%) !important;
+}
+
+.react-multiple-carousel__arrow--right {
+  right: calc(1%) !important;
+}

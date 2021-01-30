@@ -1,0 +1,47 @@
+.venue-banner-wrapper {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 15rem;
+  height: 13rem;
+  margin: auto;
+
+  border: 1px solid #E4E4E4;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px #E4E4E4;
+}
+
+.venue-banner-img-container{
+  position: absolute;
+  display: block;
+  justify-content: center;
+}
+
+.venue-banner-status{
+  width: 15rem;
+  height: 10rem;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.venue-banner-img-box__offline{
+  opacity: 0.2;
+  background-color: #008CBA;
+}
+
+.venue-banner-img-box__online{
+  opacity: 1;
+}
+
+.venue-banner-img {
+  opacity: 1;
+  width: 15rem !important;
+  height: 10rem !important;
+}
+
+.textbox-text {
+  color: #202125;
+  font-size: 20px;
+}
