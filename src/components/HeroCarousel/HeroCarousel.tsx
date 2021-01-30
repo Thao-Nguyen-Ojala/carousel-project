@@ -44,9 +44,7 @@ const HeroCarousel = ({ restaurantSection }: HeroCarouselPropsType) => {
                   punch={1}
                 />
               </div>
-              <div className="hero-text-side">
-                <div className="text">{restaurant.name}</div>
-              </div>
+              <span className="hero-text-side">{restaurant.name}</span>
             </div>
           );
         })}

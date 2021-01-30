@@ -6,13 +6,17 @@ import 'react-multi-carousel/lib/styles.css';
 import { RestaurantSection } from '../../restaurant.module';
 
 const responsive = {
-  desktopAndTablet: {
-    breakpoint: { max: 9999, min: 464 },
+  desktop: {
+    breakpoint: { max: 9999, min: 959 },
     items: 3,
   },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
+  tablet: {
+    breakpoint: { max: 959, min: 376 },
     items: 2,
+  },
+  mobile: {
+    breakpoint: { max: 376, min: 0 },
+    items: 1,
   },
 };
 
@@ -24,7 +28,7 @@ const RestaurantsCarousel = ({
   const { title, restaurants } = restaurantSection;
   return (
     <div className="carousel-container">
-      <Header title={title} />
+      <Header title={title} restaurantsCount={restaurants.length} />
       <div className="carousel-container__wrapper">
         <Carousel
           responsive={responsive}

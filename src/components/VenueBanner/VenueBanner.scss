@@ -1,10 +1,15 @@
-.venue-banner-wrapper {
+$wrapper-height: 13rem;
+$text-height: $wrapper-height / 2;
+$statusHeight: 18rem;
+$statusLineHeight: $statusHeight / 2;
+
+.venue-banner {
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  width: 15rem;
-  height: 13rem;
+  width: 22rem;
+  height: 20rem;
   margin: auto;
 
   border: 1px solid #E4E4E4;
@@ -12,36 +17,88 @@
   box-shadow: 2px 2px 10px #E4E4E4;
 }
 
-.venue-banner-img-container{
+.venue-banner-img-section {
   position: absolute;
   display: block;
   justify-content: center;
-}
-
-.venue-banner-status{
-  width: 15rem;
-  height: 10rem;
-  text-align: center;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.venue-banner-img-box__offline{
-  opacity: 0.2;
-  background-color: #008CBA;
-}
-
-.venue-banner-img-box__online{
-  opacity: 1;
+  
 }
 
 .venue-banner-img {
   opacity: 1;
-  width: 15rem !important;
-  height: 10rem !important;
+  width: 22rem !important;
+  height: 15rem !important;
+  vertical-align: middle;
+ 
 }
 
-.textbox-text {
-  color: #202125;
+.venue-banner-restaurant-name-section {
+  color: #2e2f35;
   font-size: 20px;
+  text-align: center;
+}
+
+.venue-banner-status {
+  width: 22rem;
+  height: $statusHeight;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  line-height: $text-height + $statusLineHeight;
+}
+
+.venue-banner-offline {
+  position: relative;
+  opacity: 0.2;
+}
+
+.venue-banner-online {
+  position: relative;
+  opacity: 1;
+}
+
+.status-light-text {
+  color: #646572;
+}
+
+.venue-banner:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+}
+
+@media screen and (max-width: 959px) {
+  .venue-banner {
+    width: 18rem;
+    height: 15rem;
+    margin: auto;
+  }
+
+  .venue-banner-img {
+    width: 18rem !important;
+    height: 12rem !important;
+  }
+
+  .venue-banner-status {
+    width: 18rem;
+    line-height: 13rem;
+  } 
+}
+
+@media screen and (max-width: 500px) {
+  .venue-banner {
+    width: 15rem;
+    height: 12rem;
+    margin: auto;
+  }
+
+  .venue-banner-img {
+    width: 15rem !important;
+    height: 9rem !important;
+  }
+
+  .venue-banner-status {
+    width: 15rem;
+    line-height: 9rem;
+  } 
 }
