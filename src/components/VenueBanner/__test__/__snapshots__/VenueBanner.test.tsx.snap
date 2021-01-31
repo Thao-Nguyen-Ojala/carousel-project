@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches VenueBanner snapshot 1`] = `
+<div
+  className="venue-banner"
+>
+  <div
+    className="venue-banner__img-section"
+  >
+    <div
+      className="venue-banner__img-section__img venue-banner__online"
+      style={
+        Object {
+          "display": "inline-block",
+          "height": 128,
+          "position": "relative",
+          "width": 128,
+        }
+      }
+    >
+      <canvas
+        height={32}
+        punch={1}
+        style={
+          Object {
+            "bottom": 0,
+            "height": "100%",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": "100%",
+          }
+        }
+        width={32}
+      />
+    </div>
+    <div
+      className="venue-banner__restaurant-name-section"
+    >
+      Sea Chain
+    </div>
+  </div>
+  <div
+    className="venue-banner__status"
+  >
+    <span>
+      Online
+       
+    </span>
+  </div>
+</div>
+`;

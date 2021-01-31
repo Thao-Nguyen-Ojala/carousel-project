@@ -1,12 +1,30 @@
 .header-wrapper{
-  
-}
-.header-title {
-  font-size: 2.5rem;
-  font-weight: 400;
-  margin-left: auto;
+  margin-top: 1.5rem;
+  line-height: 2.8rem;
+
+  &__title {
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-left: auto;
+  }
+
+  &__restaurants-count {
+    font-size: 1.5rem;
+  }
 }
 
-.header-restaurants-count {
-  font-size: 1.5rem;
+@media screen and (max-width: 959px){
+  .header-wrapper{
+    &__title {
+      font-size: 1.8rem;
+      font-weight: 400;
+      text-align: center;
+      margin-left: auto;
+    }
+  
+    &__restaurants-count {
+      font-size: 1.3rem;
+      text-align: center;
+    }
+  }
 }

@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches Header snapshot 1`] = `
+<div
+  className="header-wrapper"
+>
+  <span>
+    <div
+      className="header-wrapper__title"
+    >
+      Testing Header
+    </div>
+    <div
+      className="header-wrapper__restaurants-count"
+    >
+      (3 restaurants)
+    </div>
+  </span>
+</div>
+`;

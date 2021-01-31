@@ -3,8 +3,14 @@
   width: 1200px;
 }
 
-@media screen and (max-width:959px) {
+@media screen and (max-width:1200px) {
   .container {
     width: 100%;
+  }
+}
+
+@media screen and (max-width:1000px) {
+  .container {
+    width: 90%;
   }
 }

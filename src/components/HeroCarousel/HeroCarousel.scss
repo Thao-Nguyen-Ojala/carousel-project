@@ -1,66 +1,72 @@
-.hero-container{
+.hero-container {
   padding: 1rem 0;
   border: 0.5px solid #E4E4E4;
   border-radius: 10px;
   box-shadow: 2px 2px 10px #E4E4E4;
   width: 100%;
-}
 
-.hero-carousel {
-  height: 17rem;
-}
+  &__carousel {
+    height: 17rem;
 
-.hero-wrapper{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
+    &__hero-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    
+      &__img-section {
+        width: 60%;
+    
+        &__img{
+          width: 50rem !important;
+          height: 20rem !important;
+        }
+      }
 
-.hero-img-side {
-  width: 60%;
-}
-
-.hero-img {
-  width: 50rem !important;
-  height: 20rem !important;
-}
-
-.hero-text-side{
-  text-align: center;
-  padding-right: 2rem;
-  font-size: 21px;
-  font-weight: bold;
-}
-
-@media screen and (max-width:959px) {
-  .hero-img-side {
-    display: block;
-    width: 90%;
+      &__text-section{
+        text-align: center;
+        padding-right: 2rem;
+        font-size: 21px;
+        font-weight: bold;
+      }
+    }
   }
+  
+}
 
-  .hero-text-side{
-    width: 90%;
-    background-color:rgba(255,255,255, 0.3);
-    padding: 1rem;
-    position: absolute;
-    bottom: 16px;
-    text-align: center;
-  }
 
-  .hero-wrapper{
-    position: relative;
-    text-align: center;
-  }
 
-  .hero-img {
-    width: 100% !important;
-    height: width !important;
-  }
-
-  .hero-container{
+@media screen and (max-width:1100px) {
+  .hero-container {
     width: 100%;
-  }
+
+    &__carousel {
+
+      &__hero-wrapper {
+        position: relative;
+        text-align: center;
+    
+        &__img-section {
+          display: block;
+          width: 90%;
+    
+          &__img {
+            width: 100% !important;
+            height: width !important;
+          }
+        }
+    
+        &__text-section {
+        width: 90%;
+        background-color:rgba(255,255,255, 0.3);
+        padding: 1rem;
+        position: absolute;
+        bottom: 16px;
+        text-align: center;
+      }
+      }
+    }
+  } 
 }
 @media screen and (max-width:500px) {
   .hero-container{

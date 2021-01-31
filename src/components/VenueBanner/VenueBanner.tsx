@@ -8,11 +8,13 @@ type VenueBannerPropsType = {
 };
 
 const VenueBanner = ({ blurhash, name, online }: VenueBannerPropsType) => {
-  const statusClass = !online ? 'venue-banner-offline' : 'venue-banner-online';
-  const blurhashClasses = 'venue-banner-img ' + statusClass;
+  const statusClass = !online
+    ? 'venue-banner__offline'
+    : 'venue-banner__online';
+  const blurhashClasses = 'venue-banner__img-section__img ' + statusClass;
   return (
     <div className="venue-banner">
-      <div className="venue-banner-img-section">
+      <div className="venue-banner__img-section">
         <Blurhash
           className={blurhashClasses}
           hash={blurhash}
@@ -21,13 +23,13 @@ const VenueBanner = ({ blurhash, name, online }: VenueBannerPropsType) => {
           punch={1}
         />
 
-        <div className="venue-banner-restaurant-name-section">{name}</div>
+        <div className="venue-banner__restaurant-name-section">{name}</div>
       </div>
-      <div className="venue-banner-status">
+      <div className="venue-banner__status">
         {online ? (
           <span>{'Online'} </span>
         ) : (
-          <span className="status-light-text">{'Closed'} </span>
+          <span className="venue-banner__status-light-text">{'Closed'} </span>
         )}
       </div>
     </div>

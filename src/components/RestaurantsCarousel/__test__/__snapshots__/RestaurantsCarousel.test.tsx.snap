@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches RestaurantsCarousel snapshot 1`] = `
+<div
+  className="carousel-container"
+>
+  <div
+    className="header-wrapper"
+  >
+    <span>
+      <div
+        className="header-wrapper__title"
+      >
+        Popular Restaurants
+      </div>
+      <div
+        className="header-wrapper__restaurants-count"
+      >
+        (1 restaurants)
+      </div>
+    </span>
+  </div>
+  <div
+    className="carousel-container__wrapper"
+  >
+    <div
+      className="react-multi-carousel-list carousel-container__showcase "
+    >
+      <ul
+        className="react-multi-carousel-track "
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseMove={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        style={
+          Object {
+            "overflow": "unset",
+            "transform": "translate3d(0px,0,0)",
+            "transition": "none",
+          }
+        }
+      />
+    </div>
+  </div>
+</div>
+`;

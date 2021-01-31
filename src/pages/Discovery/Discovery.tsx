@@ -5,17 +5,15 @@ import * as restaurantsListJson from '../../discovery_page.json';
 import './Discovery.scss';
 
 const HomePage: React.FC = () => {
-  const [
-    popularRestaurants,
-    setPopularRestaurants,
-  ] = useState<RestaurantSection>(restaurantsListJson.sections[0]);
-  const [newRestaurants, setNewRestaurants] = useState<RestaurantSection>(
+  const [popularRestaurants] = useState<RestaurantSection>(
+    restaurantsListJson.sections[0]
+  );
+  const [newRestaurants] = useState<RestaurantSection>(
     restaurantsListJson.sections[1]
   );
-  const [nearbyRestaurants, setNearbyRestaurants] = useState<RestaurantSection>(
+  const [nearbyRestaurants] = useState<RestaurantSection>(
     restaurantsListJson.sections[2]
   );
-  console.log('pop', popularRestaurants);
 
   return (
     <>

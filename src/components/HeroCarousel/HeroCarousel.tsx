@@ -1,4 +1,3 @@
-import React from 'react';
 import './HeroCarousel.scss';
 import { Blurhash } from 'react-blurhash';
 import Carousel from 'react-multi-carousel';
@@ -6,16 +5,8 @@ import 'react-multi-carousel/lib/styles.css';
 import { RestaurantSection } from '../../restaurant.module';
 
 const responsive = {
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 1,
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 1,
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
+  screen: {
+    breakpoint: { max: 9999, min: 0 },
     items: 1,
   },
 };
@@ -30,21 +21,23 @@ const HeroCarousel = ({ restaurantSection }: HeroCarouselPropsType) => {
         responsive={responsive}
         infinite={true}
         renderButtonGroupOutside={true}
-        containerClass="hero-carousel"
+        containerClass="hero-container__carousel"
       >
         {restaurants.map((restaurant, i) => {
           return (
-            <div className="hero-wrapper">
-              <div className="hero-img-side" key={i}>
+            <div className="hero-container__carousel__hero-wrapper" key={i}>
+              <div className="hero-container__carousel__hero-wrapper__img-section">
                 <Blurhash
-                  className="hero-img"
+                  className="hero-container__carousel__hero-wrapper__img-section__img"
                   hash={restaurant.blurhash}
                   resolutionX={32}
                   resolutionY={32}
                   punch={1}
                 />
               </div>
-              <span className="hero-text-side">{restaurant.name}</span>
+              <span className="hero-container__carousel__hero-wrapper__text-section">
+                {restaurant.name}
+              </span>
             </div>
           );
         })}

@@ -2,6 +2,9 @@ $wrapper-height: 13rem;
 $text-height: $wrapper-height / 2;
 $statusHeight: 18rem;
 $statusLineHeight: $statusHeight / 2;
+//media max-width 959px
+$venueWidthBanner959px: 19rem;
+$venueWidthBanner500px: 22rem;
 
 .venue-banner {
   flex-direction: column;
@@ -15,90 +18,76 @@ $statusLineHeight: $statusHeight / 2;
   border: 1px solid #E4E4E4;
   border-radius: 10px;
   box-shadow: 2px 2px 10px #E4E4E4;
-}
 
-.venue-banner-img-section {
-  position: absolute;
-  display: block;
-  justify-content: center;
-  
-}
+  &__img-section {
+    position: absolute;
+    display: block;
+    justify-content: center;
 
-.venue-banner-img {
-  opacity: 1;
-  width: 22rem !important;
-  height: 15rem !important;
-  vertical-align: middle;
+    &__img {
+      opacity: 1;
+      width: 22rem !important;
+      height: 15rem !important;
+      vertical-align: middle;
+     
+    }
+  }
+
+  &__restaurant-name-section {
+    color: #2e2f35;
+    font-size: 20px;
+    text-align: center;
+  }
  
-}
+  &__status {
+    width: 22rem;
+    height: $statusHeight;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    line-height: $text-height + $statusLineHeight;
+  }
 
-.venue-banner-restaurant-name-section {
-  color: #2e2f35;
-  font-size: 20px;
-  text-align: center;
-}
+  &__offline {
+    position: relative;
+    opacity: 0.2;
+  }
 
-.venue-banner-status {
-  width: 22rem;
-  height: $statusHeight;
-  text-align: center;
-  font-size: 20px;
-  font-weight: bold;
-  position: absolute;
-  line-height: $text-height + $statusLineHeight;
-}
+  &__online {
+    position: relative;
+    opacity: 1;
+  }
 
-.venue-banner-offline {
-  position: relative;
-  opacity: 0.2;
-}
+  &__status-light-text {
+    color: #646572;
+  }
 
-.venue-banner-online {
-  position: relative;
-  opacity: 1;
-}
-
-.status-light-text {
-  color: #646572;
-}
-
-.venue-banner:hover {
-  cursor: pointer;
-  transform: scale(1.02);
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+  }
 }
 
 @media screen and (max-width: 959px) {
   .venue-banner {
-    width: 18rem;
-    height: 15rem;
+    width: $venueWidthBanner959px;
+    height: 18rem;
     margin: auto;
-  }
 
-  .venue-banner-img {
-    width: 18rem !important;
-    height: 12rem !important;
-  }
+    &__img-section {
+      &__img {
+        width: $venueWidthBanner959px !important;
+        height: 14rem !important;
+      }
+    }
 
-  .venue-banner-status {
-    width: 18rem;
-    line-height: 13rem;
-  } 
+    &__status {
+      width: $venueWidthBanner959px;
+      line-height: 14rem;
+    } 
+    
+  }
 }
 
-@media screen and (max-width: 500px) {
-  .venue-banner {
-    width: 15rem;
-    height: 12rem;
-    margin: auto;
-  }
 
-  .venue-banner-img {
-    width: 15rem !important;
-    height: 9rem !important;
-  }
-
-  .venue-banner-status {
-    width: 15rem;
-    line-height: 9rem;
-  } 
-}
